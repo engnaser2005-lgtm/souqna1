@@ -1,0 +1,21 @@
+/* Light/Dark mode variables - prepared for future dark mode toggle */
+:root {
+  --bg-primary: #041C3A;
+  --bg-header: #02152d;
+  --bg-card: #06264D;
+  --bg-secondary: #0b2f5c;
+  --text-primary: #ffffff;
+  --text-secondary: #dddddd;
+  --border-color: #D4AF37;
+}
+
+/* Dark mode is default, light mode can be toggled */
+[data-theme="light"] {
+  --bg-primary: #f8fafc;
+  --bg-header: #ffffff;
+  --bg-card: #ffffff;
+  --bg-secondary: #f1f5f9;
+  --text-primary: #0f172a;
+  --text-secondary: #64748b;
+  --border-color: #D4AF37;
+}

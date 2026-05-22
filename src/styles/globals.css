@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --primary-blue: #041C3A;
+    --header-blue: #02152d;
+    --gold: #D4AF37;
+    --card-blue: #06264D;
+    --secondary-blue: #0b2f5c;
+    --text-secondary: #ddd;
+    --white: #ffffff;
+    --danger: #dc2626;
+    --success: #10b981;
+    --warning: #f59e0b;
+  }
+
+  body {
+    @apply bg-primary-blue text-white font-tajawal min-h-screen;
+  }
+
+  /* Scrollbar styling */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--primary-blue);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--gold);
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #b8960c;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-gold text-primary-blue px-6 py-2 rounded-lg font-bold 
+           hover:bg-yellow-500 transition-colors duration-200 
+           disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-secondary {
+    @apply bg-transparent border-2 border-gold text-white px-6 py-2 rounded-lg 
+           hover:bg-gold hover:text-primary-blue transition-colors duration-200;
+  }
+
+  .card {
+    @apply bg-card-blue rounded-xl border border-secondary-blue 
+           hover:border-gold transition-all duration-300;
+  }
+
+  .input-field {
+    @apply w-full bg-secondary-blue border border-secondary-blue rounded-lg px-4 py-3 
+           text-white placeholder-text-secondary focus:border-gold focus:outline-none 
+           transition-colors duration-200;
+  }
+}
